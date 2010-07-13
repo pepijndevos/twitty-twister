@@ -29,7 +29,6 @@ setup(
 
     license = 'MIT',
     classifiers = [
-        "Development Status :: 5 - Stable",
         "Framework :: Twisted",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
