@@ -21,7 +21,7 @@ import txml
 
 SIGNATURE_METHOD = oauth.OAuthSignatureMethod_HMAC_SHA1()
 
-BASE_URL="https://twitter.com"
+BASE_URL="https://api.twitter.com/1"
 SEARCH_URL="http://search.twitter.com/search.atom"
 
 
