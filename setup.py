@@ -36,6 +36,6 @@ setup(
 
     platforms = "any",
     packages = ["twittytwister", ],
-    requires = ["oauth", "twisted", "twisted.web", ]
+    requires = ["oauth2", "twisted", "twisted.web", ]
     )
 
