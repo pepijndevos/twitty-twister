@@ -12,14 +12,14 @@ import mimetypes
 import mimetools
 import logging
 
-from oauth import oauth
+import oauth2 as oauth
 
 from twisted.internet import defer, reactor
 from twisted.web import client
 
 import txml
 
-SIGNATURE_METHOD = oauth.OAuthSignatureMethod_HMAC_SHA1()
+SIGNATURE_METHOD = oauth.SignatureMethod_HMAC_SHA1()
 
 BASE_URL="https://api.twitter.com/1"
 SEARCH_URL="http://search.twitter.com/search.atom"
@@ -137,7 +137,7 @@ class Twitter(object):
 
 
     def __makeOAuthHeader(self, method, url, parameters={}, headers={}):
-        oauth_request = oauth.OAuthRequest.from_consumer_and_token(self.consumer,
+        oauth_request = oauth.Request.from_consumer_and_token(self.consumer,
             token=self.token, http_method=method, http_url=url, parameters=parameters)
         oauth_request.sign_request(self.signature_method, self.consumer, self.token)
 
